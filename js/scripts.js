@@ -3,11 +3,20 @@ var ranks = ["ace","two","three","four","five","six","seven","eight","nine","ten
 var suits = ["hearts", "clubs", "spades", "diamonds"];
 var deck = [];
 
-suits.forEach(function(suit){
-  ranks.forEach(function(rank){
-  deck.push(rank + " of " + suit);
-  });
-});
+// suits.forEach(function(suit){
+//   ranks.forEach(function(rank){
+//   deck.push(rank + " of " + suit);
+//   });
+// });
+var makeDeck = function(rank, suit){
+for(i=0; i < 13; i++){
+  for(j=0; j <4; j++){
+    deck.push(rank[i] + " of " + suit[j]);
+  }
+}
+}
+makeDeck(ranks,suits);
+alert(deck);
 
 var position = Math.round(Math.random() * 51);
 var position2 = Math.round(Math.random() * 51);
